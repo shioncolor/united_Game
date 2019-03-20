@@ -3,7 +3,7 @@
 public class TitleButton : MonoBehaviour
 {
 
-    public void StartButton()
+    public void BeginButton()
     {
         SceneChangeManager.SceneChange(SceneChangeManager.Scenes.MainGame);
     }
