@@ -1,18 +1,26 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
+Library/
+library/
+Temp/
+temp/
+Obj/
+obj/
+Build/
+build/
+Builds/
+builds/
+Logs/
+logs/
 
 # Never ignore Asset meta data
-![Aa]ssets/**/*.meta
+!Assets/**/*.meta
+!assets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
 
 # TextMesh Pro files
-[Aa]ssets/TextMesh*Pro/
+Assets/TextMesh*Pro/
+assets/TextMesh*Pro/
 
 # Visual Studio cache directory
 .vs/

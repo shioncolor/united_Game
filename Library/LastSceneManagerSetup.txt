@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Scene/GameOver.unity
+  isLoaded: 1
+  isActive: 1
