@@ -20,12 +20,12 @@ public class ObjectMove : MonoBehaviour {
     {
         if (Input.GetMouseButton(0))
         {
-            if (Height <= (int)Input.mousePosition.x)
+            if (Height <= (int)Input.mousePosition.x) // 右移動
             {
                 Player.transform.position += PlayerMoveDirection;
                 BackGround.transform.position += BackGroundMoveDirection;
             }
-            else
+            else // 左移動
             {
                 Player.transform.position -= PlayerMoveDirection;
                 BackGround.transform.position -= BackGroundMoveDirection;
