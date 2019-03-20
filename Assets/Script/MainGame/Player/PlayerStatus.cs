@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
 {
-
-    private static bool hide;
+    //隠れているかどうか
+    private static bool hide= false;
     public static bool Hide
     {
         get { return hide; }

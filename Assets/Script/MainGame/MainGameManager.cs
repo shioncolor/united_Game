@@ -7,13 +7,17 @@ using UnityEngine.UI;
 
 public class MainGameManager : MonoBehaviour {
 
-    #region
+
+    #region　キャッシュ
     public ObjectMove Move { get { return this.objectMove ?? (this.objectMove = GetComponent<ObjectMove>()); } }
     ObjectMove objectMove;
     #endregion
 
     [SerializeField]
-    Text text;
+   private Text text;
+
+    public int a;
+    public GameObject aaa;
     // Use this for initialization
     void Start () {
 

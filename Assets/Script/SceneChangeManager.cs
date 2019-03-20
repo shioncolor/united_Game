@@ -31,7 +31,8 @@ public class SceneChangeManager
                 break;
 
             case Scenes.MainGame:
-                SceneManager.LoadScene(SceneName[(int)Scenes.MainGame]);
+               int random = Random.Range((int)Scenes.MainGame, (int)Scenes.GameOver);
+                SceneManager.LoadScene(SceneName[random]);
                 break;
 
             case Scenes.GameOver:
@@ -45,4 +46,5 @@ public class SceneChangeManager
                 break;
         }
     }
+
 }
