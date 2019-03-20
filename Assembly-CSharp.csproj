@@ -60,7 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\GameOver\GameOverButton.cs" />
-    <Compile Include="Assets\Script\MainGame\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Script\MainGame\MainGameManager.cs" />
+    <Compile Include="Assets\Script\MainGame\MoveObject\ObjectMove.cs" />
     <Compile Include="Assets\Script\SceneChangeManager.cs" />
     <Compile Include="Assets\Script\Title\TitleButton.cs" />
     <Reference Include="UnityEditor.StandardEvents">
