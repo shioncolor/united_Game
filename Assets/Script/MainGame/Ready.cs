@@ -6,6 +6,8 @@ public class Ready : MonoBehaviour
 {
     [SerializeField]
     GameObject Go;
+    [SerializeField]
+    GameObject HomeButton;
 
     public void RedyGo()
     {
@@ -21,5 +23,6 @@ public class Ready : MonoBehaviour
         Go.SetActive(false);
         yield return new WaitForSeconds(1f);
         StopClass.Stop = false;
+        HomeButton.SetActive(true);
     }
 }

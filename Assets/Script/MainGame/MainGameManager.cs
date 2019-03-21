@@ -12,6 +12,8 @@ public class MainGameManager : MonoBehaviour {
     private GameObject[] Player;
     [SerializeField]
     private GameObject Enemy;
+    [SerializeField]
+    GameObject FadePanel;
 
     private float time;
     private int random;
@@ -19,9 +21,11 @@ public class MainGameManager : MonoBehaviour {
     void Start () {
 
         //playerの生成
-        random = Random.Range(0,Player.Length);
-        Instantiate(Player[random]);
-
+        //if (SelectStageStatus.StageNum != 4)
+        //{
+        //    SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
+        //    Instantiate(Player[SelectStageStatus.PlayerNum]);
+        //}
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
     }
@@ -44,12 +48,14 @@ public class MainGameManager : MonoBehaviour {
     {
         StopClass.Stop = true;
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
         Animator anim = Enemy.GetComponent<Animator>();
         anim.SetTrigger("GameOver");
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
+
         //ゲームオーバー
-        SceneChangeManager.SceneChange(SceneChangeManager.Scenes.GameOver);
+        FadeOut fo = FadePanel.GetComponent<FadeOut>();
+        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.GameOver);
     }
 }

@@ -8,6 +8,8 @@ public class EnemyAction : MonoBehaviour
     public Animator anim { get { return this._anim ?? (this._anim = GetComponent<Animator>()); } }
     Animator _anim;
 
+    [SerializeField]
+    GameObject Icon;
 
     //振り返っているかどうか
     private static bool trun;
@@ -59,6 +61,8 @@ public class EnemyAction : MonoBehaviour
 
         if (Random.Range(0, 6) >= 3)
         {
+            Icon.SetActive(true);
+
             anim.SetTrigger("Side_Forward");
             Behide();
             
@@ -66,11 +70,14 @@ public class EnemyAction : MonoBehaviour
             yield return new WaitForSeconds(BehideTIme[ramdom]);
             anim.SetTrigger("Forward_Behide");
             Forward();
+
+            Icon.SetActive(false);
         }
         else
         {
             anim.SetTrigger("Side_Behide");
         }
+
         //後ろを向いている時間
         yield return new WaitForSeconds(ForwardTime[ramdom]);
         ActionFlag = false;

@@ -20,7 +20,7 @@ public class FadeOut : MonoBehaviour {
     void Start() {
         image = GetComponent<Image>();
 
-        Debug.Log("Started.");
+
         r = 0;
         g = 0;
         b = 0;
@@ -40,7 +40,6 @@ public class FadeOut : MonoBehaviour {
         else if (running)
         {
             image.color = new Color(r, g, b, 1.0f);
-            Debug.Log("Ended");
             running = false;
             Invoke("changeScene", 1.0f);
         }

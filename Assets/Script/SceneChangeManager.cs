@@ -11,9 +11,11 @@ public class SceneChangeManager
     {
         Title = 0,
         MainGame,
+        MainGame2,
         GameOver,
+        BonusStage,
         Clear,
-
+        Retry,
         End
     }
 
@@ -21,10 +23,12 @@ public class SceneChangeManager
     {
           "Title",
           "MainGame",
+           "MainGame2",
+           "MainGame3",
+           "BonusStage",
           "GameOver",
           "Clear"
     };
-
     public static void SceneChange(Scenes scene)
     {
 
@@ -35,8 +39,21 @@ public class SceneChangeManager
                 break;
 
             case Scenes.MainGame:
-                int random = Random.Range((int)Scenes.MainGame, (int)Scenes.GameOver);
-                SceneManager.LoadScene(SceneName[random]);
+                if (Random.Range(0, 100) == 4)
+                {
+                    SelectStageStatus.StageNum = 4;
+                    SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
+                }
+                else
+                {
+                    SelectStageStatus.StageNum = Random.Range((int)Scenes.MainGame, (int)Scenes.GameOver);
+                    SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
+                }
+                 break;
+
+            case Scenes.BonusStage:
+                SelectStageStatus.StageNum = 4;
+                SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
                 break;
 
             case Scenes.GameOver:
@@ -47,8 +64,13 @@ public class SceneChangeManager
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
                 break;
 
+            case Scenes.Retry:
+                SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
+                break;
+
             case Scenes.End:
                 Application.Quit();
+
                 break;
             default:
                 break;

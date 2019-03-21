@@ -9,7 +9,7 @@ public class ClearButtonScript : MonoBehaviour
     {
         GameObject panel = GameObject.Find("FadeOutPanel");
         FadeOut fo = panel.GetComponent<FadeOut>();
-        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.MainGame);
+        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Retry);
     }
 
     public void HomeButton()

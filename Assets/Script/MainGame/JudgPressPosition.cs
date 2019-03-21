@@ -7,7 +7,7 @@ public static class JudgPressPosition
 {
     public static bool Press()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && Screen.height / 2 >= (int)Input.mousePosition.y)
         {
             return true;
         }
@@ -19,7 +19,7 @@ public static class JudgPressPosition
 
     public static bool PositionJug()
     {
-        if (Screen.height / 2 <= (int)Input.mousePosition.x)
+        if (Screen.width / 2 <= (int)Input.mousePosition.x)
         {
             return true;
         }
