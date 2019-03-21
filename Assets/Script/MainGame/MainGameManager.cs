@@ -25,11 +25,8 @@ public class MainGameManager : MonoBehaviour {
 
         if(EnemyAction.Trun && !PlayerStatus.Hide)
         {
-            text.text = "true";
-        }
-        else
-        {
-            text.text = "false";
+            //ゲームオーバー
+            SceneChangeManager.SceneChange(SceneChangeManager.Scenes.GameOver);
         }
     }
 }

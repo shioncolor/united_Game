@@ -11,6 +11,7 @@ public class SceneChangeManager
         Title = 0,
         MainGame,
         GameOver,
+
         End
     }
 
