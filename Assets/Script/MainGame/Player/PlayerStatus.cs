@@ -13,11 +13,11 @@ public class PlayerStatus : MonoBehaviour
         private set { hide = value; }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D()
     {
         Hide = true;
     }
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D()
     {
         Hide = false;
     }

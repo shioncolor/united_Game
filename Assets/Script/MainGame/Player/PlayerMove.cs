@@ -27,6 +27,12 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (StopClass.Stop)
+        {
+            anim.SetBool("Is_run", false);
+            return;
+        }
+
         if (JudgPressPosition.Press())
         {
             anim.SetBool("Is_run", true);

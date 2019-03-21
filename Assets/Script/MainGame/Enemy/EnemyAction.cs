@@ -10,7 +10,7 @@ public class EnemyAction : MonoBehaviour
 
 
     //振り返っているかどうか
-    private static bool trun = false;
+    private static bool trun;
     public static bool Trun
     {
         get { return trun; }
@@ -27,13 +27,13 @@ public class EnemyAction : MonoBehaviour
 
     void Start()
     {
+        Forward();
         StartCoroutine("start");
-
     }
 
     void Update()
     {
-        if (!ActionFlag)
+        if (!ActionFlag && !StopClass.Stop)
         {
             ActionFlag = true;
             StartCoroutine("Side");
