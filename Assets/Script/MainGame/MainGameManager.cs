@@ -11,13 +11,15 @@ public class MainGameManager : MonoBehaviour {
     [SerializeField]
    private Text text;
 
-    public int a;
-    public GameObject aaa;
+    [SerializeField]
+    private GameObject[] Player;
 
     // Use this for initialization
     void Start () {
-
-	}
+        //playerの生成
+        int random = Random.Range(0,2);
+        Instantiate(Player[random]);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,7 +28,14 @@ public class MainGameManager : MonoBehaviour {
         if(EnemyAction.Trun && !PlayerStatus.Hide)
         {
             //ゲームオーバー
-            SceneChangeManager.SceneChange(SceneChangeManager.Scenes.GameOver);
+            //SceneChangeManager.SceneChange(SceneChangeManager.Scenes.GameOver);
+
+            text.text = "ゲームオーバー";
+        }
+        else
+        {
+            text.text = "";
+
         }
     }
 }

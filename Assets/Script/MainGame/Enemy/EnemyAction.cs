@@ -6,6 +6,7 @@ public class EnemyAction : MonoBehaviour
 {
     [SerializeField]
     GameObject Chara;
+
     //振り返っているかどうか
     private static bool trun = false;
     public static bool Trun
@@ -20,7 +21,12 @@ public class EnemyAction : MonoBehaviour
     private float[] BehideTIme = { 3.0f, 4.0f, 2.5f };
 
 
-    private bool ActionFlag = false;
+    private bool ActionFlag = true;
+
+    void Start()
+    {
+        StartCoroutine("start");
+    }
 
     void Update()
     {
@@ -62,6 +68,14 @@ public class EnemyAction : MonoBehaviour
         Chara.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         //後ろを向いている時間
         yield return new WaitForSeconds(ForwardTime[ramdom]);
+        ActionFlag = false;
+    }
+
+
+
+    private IEnumerator start()
+    {
+        yield return new WaitForSeconds(3);
         ActionFlag = false;
     }
 }
