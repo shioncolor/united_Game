@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyAction : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Chara;
+
+    public Animator anim { get { return this._anim ?? (this._anim = GetComponent<Animator>()); } }
+    Animator _anim;
+
 
     //振り返っているかどうか
     private static bool trun = false;
@@ -26,6 +28,7 @@ public class EnemyAction : MonoBehaviour
     void Start()
     {
         StartCoroutine("start");
+
     }
 
     void Update()
@@ -33,7 +36,6 @@ public class EnemyAction : MonoBehaviour
         if (!ActionFlag)
         {
             ActionFlag = true;
-            Chara.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 90.0f);
             StartCoroutine("Side");
         }
     }
@@ -51,21 +53,24 @@ public class EnemyAction : MonoBehaviour
     private IEnumerator Side()
     {
         int ramdom = Random.Range(0, 3);
-
+        anim.SetTrigger("Behide_Side");
         //横を向いている時間
         yield return new WaitForSeconds(SideTIme[ramdom]);
 
-        if (Random.Range(0, 3) == 0)
+        if (Random.Range(0, 6) >= 3)
         {
-            Chara.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 180.0f);
+            anim.SetTrigger("Side_Forward");
             Behide();
             
             //こっちをを向いている時間
             yield return new WaitForSeconds(BehideTIme[ramdom]);
+            anim.SetTrigger("Forward_Behide");
             Forward();
         }
-
-        Chara.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+        else
+        {
+            anim.SetTrigger("Side_Behide");
+        }
         //後ろを向いている時間
         yield return new WaitForSeconds(ForwardTime[ramdom]);
         ActionFlag = false;
