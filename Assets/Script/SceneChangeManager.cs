@@ -12,6 +12,7 @@ public class SceneChangeManager
         MainGame,
         GameOver,
         Clear,
+
         End
     }
 
@@ -21,7 +22,7 @@ public class SceneChangeManager
           "MainGame",
           "GameOver",
           "Clear"
-     };
+    };
 
     public static void SceneChange(Scenes scene)
     {
@@ -33,7 +34,7 @@ public class SceneChangeManager
                 break;
 
             case Scenes.MainGame:
-               int random = Random.Range((int)Scenes.MainGame, (int)Scenes.GameOver);
+                int random = Random.Range((int)Scenes.MainGame, (int)Scenes.GameOver);
                 SceneManager.LoadScene(SceneName[random]);
                 break;
 
