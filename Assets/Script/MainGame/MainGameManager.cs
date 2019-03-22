@@ -76,6 +76,7 @@ public class MainGameManager : MonoBehaviour {
 
         yield return new WaitForSeconds(2f);
 
+        Score.SetScoreTime(time);
         //ゲームオーバー
         FadeIO fo = FadePanel.GetComponent<FadeIO>();
         fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.GameOver);

@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Score
+public  class Score
 {
 
-    private static float scoreTime;
+    private static int scoreTime;
+    static string key = "HIGH SCORE";
+
+    void Start()
+    {
+        scoreTime = PlayerPrefs.GetInt(key, 0);
+    }
 
     public static float GetScoreTime()
     {
@@ -15,7 +21,10 @@ public static class Score
     public static void SetScoreTime(float time)
     {
         if (scoreTime < time)
-            scoreTime = time;
+        {
+            scoreTime = (int)time;
+            PlayerPrefs.SetInt(key, scoreTime);
+        }
     }
 
 }
