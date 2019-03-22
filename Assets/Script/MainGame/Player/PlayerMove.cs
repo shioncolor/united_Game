@@ -16,10 +16,6 @@ public class PlayerMove : MonoBehaviour
     //移動速度
     private Vector3 MoveDirection = new Vector3(0.1f, 0.0f, 0.0f);
 
-    //playerの初期値
-    private Vector3 CameraPos;
-
- 
     void Start()
     {
 

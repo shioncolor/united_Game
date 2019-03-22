@@ -10,11 +10,11 @@ public class CharaMove : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
-    private float flap = 10f;
+    private float flap = 20f;
     private bool jump = false;
 
     float time = 0;
-    float jumpTime = 0.9f;//一回のジャンプの上限
+    float jumpTime = 0.5f;//一回のジャンプの上限
     // Use this for initialization
     void Start()
     {

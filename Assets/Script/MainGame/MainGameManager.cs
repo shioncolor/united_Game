@@ -21,11 +21,14 @@ public class MainGameManager : MonoBehaviour {
     void Start () {
 
         //playerの生成
-        //if (SelectStageStatus.StageNum != 4)
-        //{
-        //    SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
-        //    Instantiate(Player[SelectStageStatus.PlayerNum]);
-        //}
+        if (SelectStageStatus.StageNum != 4)
+        {
+            SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
+
+            Instantiate(Player[SelectStageStatus.PlayerNum]);
+        }
+
+
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
     }
