@@ -25,9 +25,8 @@ public class SceneChangeManager
           "Title",
           "MainGame",
            "MainGame2",
-           "MainGame3",
-           "BonusStage",
           "GameOver",
+          "BonusStage",
           "Clear"
     };
 

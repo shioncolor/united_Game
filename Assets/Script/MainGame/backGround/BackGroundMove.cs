@@ -18,6 +18,9 @@ public class BackGroundMove : MonoBehaviour
 
     void Update()
     {
+        if (StopClass.Stop)
+            return;
+
         if (JudgPressPosition.Press() && !StopClass.Stop)
         {
             if(JudgPressPosition.PositionJug())
