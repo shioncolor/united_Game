@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -455,6 +455,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114850336507008040, guid: 01b8da741c672c84aa74c9b8523ff1e1,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01b8da741c672c84aa74c9b8523ff1e1, type: 2}
   m_IsPrefabParent: 0
@@ -566,8 +571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: -40}
-  m_SizeDelta: {x: 240, y: 71.388885}
+  m_AnchoredPosition: {x: 99, y: -60.4}
+  m_SizeDelta: {x: 367, y: 109.31519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774518917
 MonoBehaviour:
@@ -704,8 +709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: -115}
-  m_SizeDelta: {x: 131, y: 36.668804}
+  m_AnchoredPosition: {x: 268, y: -174.2}
+  m_SizeDelta: {x: 198, y: 55.265476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867910073
 MonoBehaviour:

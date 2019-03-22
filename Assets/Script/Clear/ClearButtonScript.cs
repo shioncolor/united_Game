@@ -7,15 +7,15 @@ public class ClearButtonScript : MonoBehaviour
 
     public void RetryButton()
     {
-        GameObject panel = GameObject.Find("FadeOutPanel");
-        FadeOut fo = panel.GetComponent<FadeOut>();
-        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Retry);
+        GameObject panel = GameObject.Find("FadePanel");
+        FadeIO fo = panel.GetComponent<FadeIO>();
+        fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Retry);
     }
 
     public void HomeButton()
     {
-        GameObject panel = GameObject.Find("FadeOutPanel");
-        FadeOut fo = panel.GetComponent<FadeOut>();
-        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Title);
+        GameObject panel = GameObject.Find("FadePanel");
+        FadeIO fo = panel.GetComponent<FadeIO>();
+        fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Title);
     }
 }
