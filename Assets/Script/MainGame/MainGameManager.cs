@@ -34,7 +34,7 @@ public class MainGameManager : MonoBehaviour {
         ScoreText = ScoreTextObject.GetComponent<Text>();
 
         //playerの生成
-        if (SelectStageStatus.StageNum != 4)
+        if (SelectStageStatus.StageNum != (int)SceneChangeManager.Scenes.BonusStage)
         {
             SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
 

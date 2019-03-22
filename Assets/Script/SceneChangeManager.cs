@@ -31,20 +31,27 @@ public class SceneChangeManager
           "Clear"
     };
 
+    private static bool nowBonus = false;
+
     public static void SceneChange(Scenes scene)
     {
+        Debug.Log("Begin SC: " + SceneName[SelectStageStatus.StageNum]);
 
         switch (scene)
         {
             case Scenes.Title:
+                nowBonus = false;
                 SceneManager.LoadScene(SceneName[(int)Scenes.Title]);
                 break;
 
             case Scenes.MainGame:
+                nowBonus = false;
                 if (Random.Range(0, 100) == 4)
                 {
-                    SelectStageStatus.StageNum = 5;
-                    SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
+                    // Bonus stage!!
+                    nowBonus = true;
+                    SelectStageStatus.StageNum = (int)Scenes.BonusStage;
+                    SceneManager.LoadScene(SceneName[(int)Scenes.BonusStage]);
                 }
                 else
                 {
@@ -54,15 +61,30 @@ public class SceneChangeManager
                  break;
 
             case Scenes.BonusStage:
-                SelectStageStatus.StageNum = 5;
-                SceneManager.LoadScene(SceneName[SelectStageStatus.StageNum]);
+                nowBonus = true;
+                SelectStageStatus.StageNum = (int)Scenes.BonusStage;
+                SceneManager.LoadScene(SceneName[(int)Scenes.BonusStage]);
                 break;
 
             case Scenes.GameOver:
+                Debug.Log(nowBonus);
                 SceneManager.LoadScene(SceneName[(int)Scenes.GameOver]);
+                if (nowBonus)
+                {
+                    SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
+                    {
+                        if (now.name == "GameOver")
+                        {
+                            GameObject.Find("BackGround/BonusImage").SetActive(true);
+                            GameObject.Find("BackGround/Image").SetActive(false);
+                        }
+                    };
+                }
+                nowBonus = false;
                 break;
 
             case Scenes.Clear:
+                nowBonus = false;
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
                 SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
                 {
@@ -79,8 +101,10 @@ public class SceneChangeManager
 
                 break;
             default:
+                nowBonus = false;
                 break;
         }
+        Debug.Log("Ending SC: " + SceneName[SelectStageStatus.StageNum]);
     }
 
 }
