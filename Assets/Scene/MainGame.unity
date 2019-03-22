@@ -2092,7 +2092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -338.58127, y: 202.195}
+  m_AnchoredPosition: {x: -338.58127, y: 172.8}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998962078
@@ -2940,6 +2940,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01b8da741c672c84aa74c9b8523ff1e1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1338607151 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1586996317670428, guid: 7fb4f3610e9a46648a04ae6b63b928ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 356726738}
 --- !u!1 &1385723709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,7 +3077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -337.6275, y: 123.98749}
+  m_AnchoredPosition: {x: -337.6275, y: 93}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1397601014
@@ -3484,6 +3489,7 @@ MonoBehaviour:
   - {fileID: 1270607165535222, guid: 2ac99d4af13f8fa43b6d7065936187c2, type: 2}
   Enemy: {fileID: 589410695}
   FadePanel: {fileID: 1802914554}
+  ScoreTextObject: {fileID: 1338607151}
 --- !u!114 &1578676687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4369,7 +4375,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1973636261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.1, y: -0.52857137, z: 0}
+  m_LocalPosition: {x: 10.4, y: -0.52857137, z: 0}
   m_LocalScale: {x: 2.7, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 425495144}

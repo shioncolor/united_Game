@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354, y: 129.99998}
+  m_AnchoredPosition: {x: -354, y: 97}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31909268
@@ -596,6 +596,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224941653073419546, guid: 7fb4f3610e9a46648a04ae6b63b928ee,
     type: 2}
   m_PrefabInternal: {fileID: 155953297}
+--- !u!1 &155953299 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1586996317670428, guid: 7fb4f3610e9a46648a04ae6b63b928ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 155953297}
 --- !u!1 &249979240
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +992,7 @@ MonoBehaviour:
   - {fileID: 1432679611039734, guid: 2862fb29e7b0bce43b6807d23e7fa7e7, type: 2}
   Enemy: {fileID: 355715779}
   FadePanel: {fileID: 1931525942}
+  ScoreTextObject: {fileID: 155953299}
 --- !u!4 &283601830
 Transform:
   m_ObjectHideFlags: 0
@@ -2348,7 +2354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -355, y: 212}
+  m_AnchoredPosition: {x: -355, y: 172.8}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129461064

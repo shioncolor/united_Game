@@ -15,6 +15,8 @@ public class CharaMove : MonoBehaviour
 
     float time = 0;
     float jumpTime = 0.5f;//一回のジャンプの上限
+
+
     // Use this for initialization
     void Start()
     {
@@ -49,6 +51,6 @@ public class CharaMove : MonoBehaviour
     {
         jump = false;
         time = 0;
-    }
 
+    }
 }

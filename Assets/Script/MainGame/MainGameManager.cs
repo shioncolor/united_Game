@@ -26,12 +26,12 @@ public class MainGameManager : MonoBehaviour {
         ScoreText = ScoreTextObject.GetComponent<Text>();
 
         //playerの生成
-        if (SelectStageStatus.StageNum != 4)
-        {
-            SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
+        //if (SelectStageStatus.StageNum != 4)
+        //{
+        //    SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
 
-            Instantiate(Player[SelectStageStatus.PlayerNum]);
-        }
+        //    Instantiate(Player[SelectStageStatus.PlayerNum]);
+        //}
 
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
@@ -49,6 +49,12 @@ public class MainGameManager : MonoBehaviour {
         if (EnemyAction.Trun && !PlayerStatus.Hide)
         {
             StartCoroutine("GameOver");
+        }
+        else if(Hitflag.Hit)
+        {
+            StopClass.Stop = true;
+            FadeIO fo = FadePanel.GetComponent<FadeIO>();
+            fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.GameOver);
         }
     }
 
