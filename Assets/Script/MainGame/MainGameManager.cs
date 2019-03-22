@@ -16,10 +16,18 @@ public class MainGameManager : MonoBehaviour {
     GameObject FadePanel;
     [SerializeField]
     GameObject ScoreTextObject;
-
-    private float time;
+    
     private int random;
     private Text ScoreText;
+
+    private static float time = 0;
+    public static float ScoreTime
+    {
+        get { return time; }
+
+        private set { time = value; }
+    }
+
     // Use this for initialization
     void Start () {
         //経過時間Textの取得

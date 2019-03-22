@@ -12,6 +12,7 @@ public class SceneChangeManager
         Title = 0,
         MainGame,
         MainGame2,
+        MainGame3,
         GameOver,
         BonusStage,
         Clear,
@@ -24,6 +25,7 @@ public class SceneChangeManager
           "Title",
           "MainGame",
            "MainGame2",
+           "MainGame3",
           "GameOver",
           "BonusStage",
           "Clear"
@@ -64,7 +66,7 @@ public class SceneChangeManager
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
                 SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
                 {
-                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = Score.GetScoreTime().ToString("F1") + "秒!";
+                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = MainGameManager.ScoreTime.ToString("F1") + "秒!";
                 };
                 break;
 
