@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class SceneChangeManager
 {
-    public static float time;
 
     public enum Scenes
     {
@@ -65,7 +64,7 @@ public class SceneChangeManager
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
                 SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
                 {
-                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = time.ToString("F1") + "秒!";
+                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = Score.GetScoreTime().ToString("F1") + "秒!";
                 };
                 break;
 
