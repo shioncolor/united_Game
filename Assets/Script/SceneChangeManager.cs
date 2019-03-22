@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SceneChangeManager
 {
+    public static float time;
 
     public enum Scenes
     {
@@ -28,6 +29,7 @@ public class SceneChangeManager
           "BonusStage",
           "Clear"
     };
+
     public static void SceneChange(Scenes scene)
     {
 
@@ -61,6 +63,10 @@ public class SceneChangeManager
 
             case Scenes.Clear:
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
+                SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
+                {
+                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = time.ToString("F1") + "秒!";
+                };
                 break;
 
             case Scenes.Retry:
