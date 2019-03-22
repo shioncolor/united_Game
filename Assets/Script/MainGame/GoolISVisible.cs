@@ -47,7 +47,7 @@ public class GoolISVisible : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        //ゲームオーバー
+        //クリア
         FadeIO fo = FadePanel.GetComponent<FadeIO>();
         fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.Clear);
     }
