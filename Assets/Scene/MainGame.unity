@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589410695}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dee8c7b1fef1d3446b747e7d0f44f517, type: 3}
   m_Name: 
@@ -1728,11 +1728,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &680278315 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1586996317670428, guid: 7fb4f3610e9a46648a04ae6b63b928ee,
-    type: 2}
-  m_PrefabInternal: {fileID: 356726738}
 --- !u!1 &701982574
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3484,6 @@ MonoBehaviour:
   - {fileID: 1270607165535222, guid: 2ac99d4af13f8fa43b6d7065936187c2, type: 2}
   Enemy: {fileID: 589410695}
   FadePanel: {fileID: 1802914554}
-  ScoreTextObject: {fileID: 680278315}
 --- !u!114 &1578676687
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,8 +26,12 @@ public class CharaMove : MonoBehaviour
     {
         if (StopClass.Stop)
         {
-            //anim.SetBool("Is_run", false);
+            anim.SetBool("Is_run", false);
             return;
+        }
+        else
+        {
+            anim.SetBool("Is_run", true);
         }
 
         if (time < jumpTime)
