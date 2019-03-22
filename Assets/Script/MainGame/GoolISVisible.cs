@@ -37,6 +37,8 @@ public class GoolISVisible : MonoBehaviour
     void OnBecameVisible()
     {
         StopClass.Stop = true;
+        
+        Score.SetScoreTime(1);
 
         StartCoroutine("Visible");
         
