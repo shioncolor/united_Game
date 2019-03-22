@@ -826,7 +826,7 @@ Prefab:
     - target: {fileID: 224943768296470842, guid: 01b8da741c672c84aa74c9b8523ff1e1,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224943768296470842, guid: 01b8da741c672c84aa74c9b8523ff1e1,
         type: 2}
@@ -3360,6 +3360,7 @@ MonoBehaviour:
   - {fileID: 0}
   Enemy: {fileID: 0}
   FadePanel: {fileID: 1348784489}
+  ScoreTextObject: {fileID: 0}
 --- !u!4 &1315299258
 Transform:
   m_ObjectHideFlags: 0

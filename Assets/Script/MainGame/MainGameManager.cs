@@ -14,11 +14,16 @@ public class MainGameManager : MonoBehaviour {
     private GameObject Enemy;
     [SerializeField]
     GameObject FadePanel;
+    [SerializeField]
+    GameObject ScoreTextObject;
 
     private float time;
     private int random;
+    private Text ScoreText;
     // Use this for initialization
     void Start () {
+        //経過時間Textの取得
+        ScoreText = ScoreTextObject.GetComponent<Text>();
 
         //playerの生成
         if (SelectStageStatus.StageNum != 4)
@@ -39,6 +44,7 @@ public class MainGameManager : MonoBehaviour {
             return;
 
         time += Time.deltaTime;
+        ScoreText.text = time.ToString("F1") + "秒!";
 
         if (EnemyAction.Trun && !PlayerStatus.Hide)
         {
