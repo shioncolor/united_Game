@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/BonusStage.unity
+- path: Assets/Scene/MainGame3.unity
   isLoaded: 1
   isActive: 1
