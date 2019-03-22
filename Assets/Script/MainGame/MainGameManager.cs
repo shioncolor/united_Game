@@ -24,16 +24,10 @@ public class MainGameManager : MonoBehaviour {
         if (SelectStageStatus.StageNum != 4)
         {
             SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
-<<<<<<< HEAD
 
             Instantiate(Player[SelectStageStatus.PlayerNum]);
         }
 
-
-=======
-            Instantiate(Player[SelectStageStatus.PlayerNum]);
-        }
->>>>>>> 8b2afe67c6e5073186033f83b5c548e9aa504fcf
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
     }
