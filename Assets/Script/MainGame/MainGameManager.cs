@@ -34,12 +34,12 @@ public class MainGameManager : MonoBehaviour {
         ScoreText = ScoreTextObject.GetComponent<Text>();
 
         //playerの生成
-        //if (SelectStageStatus.StageNum != 4)
-        //{
-        //    SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
+        if (SelectStageStatus.StageNum != 4)
+        {
+            SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
 
-        //    Instantiate(Player[SelectStageStatus.PlayerNum]);
-        //}
+            Instantiate(Player[SelectStageStatus.PlayerNum]);
+        }
 
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
