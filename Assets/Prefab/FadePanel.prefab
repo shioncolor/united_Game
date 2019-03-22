@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114850336507008040}
   - component: {fileID: 114733897515990692}
   m_Layer: 5
-  m_Name: FadeOutPanel
+  m_Name: FadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

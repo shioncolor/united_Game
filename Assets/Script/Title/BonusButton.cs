@@ -14,8 +14,8 @@ public class BonusButton : MonoBehaviour {
         count++;
         if(count>=20)
         {
-            FadeOut fo = panel.GetComponent<FadeOut>();
-            fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.BonusStage);
+            FadeIO fo = panel.GetComponent<FadeIO>();
+            fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.BonusStage);
         }
     }
 }
