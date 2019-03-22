@@ -41,6 +41,8 @@ public class MainGameManager : MonoBehaviour {
             Instantiate(Player[SelectStageStatus.PlayerNum]);
         }
 
+        time = 0;
+
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
     }
@@ -52,7 +54,7 @@ public class MainGameManager : MonoBehaviour {
             return;
 
         time += Time.deltaTime;
-        ScoreText.text = time.ToString("F1") + "秒!";
+        ScoreText.text = (int)time + "秒!";
 
         if (EnemyAction.Trun && !PlayerStatus.Hide)
         {

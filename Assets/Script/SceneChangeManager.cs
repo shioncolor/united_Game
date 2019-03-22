@@ -66,7 +66,7 @@ public class SceneChangeManager
                 SceneManager.LoadScene(SceneName[(int)Scenes.Clear]);
                 SceneManager.sceneLoaded += (Scene now, LoadSceneMode mode) =>
                 {
-                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = MainGameManager.ScoreTime.ToString("F1") + "秒!";
+                    GameObject.Find("ScoreImage/Text").GetComponent<Text>().text = (int)MainGameManager.ScoreTime + "秒!";
                 };
                 break;
 
