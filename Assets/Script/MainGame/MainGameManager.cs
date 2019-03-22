@@ -21,11 +21,11 @@ public class MainGameManager : MonoBehaviour {
     void Start () {
 
         //playerの生成
-        //if (SelectStageStatus.StageNum != 4)
-        //{
-        //    SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
-        //    Instantiate(Player[SelectStageStatus.PlayerNum]);
-        //}
+        if (SelectStageStatus.StageNum != 4)
+        {
+            SelectStageStatus.PlayerNum = Random.Range(0, Player.Length);
+            Instantiate(Player[SelectStageStatus.PlayerNum]);
+        }
         var RedyGo = GetComponent<Ready>();
         RedyGo.RedyGo();
     }
@@ -55,7 +55,7 @@ public class MainGameManager : MonoBehaviour {
         yield return new WaitForSeconds(2f);
 
         //ゲームオーバー
-        FadeOut fo = FadePanel.GetComponent<FadeOut>();
-        fo.begin(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.GameOver);
+        FadeIO fo = FadePanel.GetComponent<FadeIO>();
+        fo.doFadeOut(SceneChangeManager.SceneChange, SceneChangeManager.Scenes.GameOver);
     }
 }
