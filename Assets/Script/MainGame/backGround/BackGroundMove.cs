@@ -8,12 +8,14 @@ public class BackGroundMove : MonoBehaviour
     [SerializeField]
     GameObject BackGround;
 
+    Vector3 pos;//初期値
+
     //BackGroundの移動速度
     private Vector3 BackGroundMoveDirection = new Vector3(0.095f, 0.0f, 0.0f);
     
     void Start()
     {
-  
+        pos = transform.position;
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class BackGroundMove : MonoBehaviour
             {
                 BackGround.transform.position += BackGroundMoveDirection;
             }
-            else
+            else if(pos.x< BackGround.transform.position.x - BackGroundMoveDirection.x)
             {
                 BackGround.transform.position -= BackGroundMoveDirection;
             }
